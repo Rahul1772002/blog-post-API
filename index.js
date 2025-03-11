@@ -4,6 +4,7 @@ import cors from "cors"
 import cookieParseer from "cookie-parser";
 import mongoose from "mongoose";
 import authRoutes from "./routes/authRoutes.js"
+import postsRoutes from "./routes/postsRouter.js"
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/auth", authRoutes);
+app.use("/api/posts",postsRoutes)
 
  
 app.listen(process.env.PORT, () => {

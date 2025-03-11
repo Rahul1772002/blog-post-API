@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import User from './userModel.js'
 
 const postsSchema = mongoose.Schema(
   {
@@ -21,4 +22,6 @@ const postsSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('Posts', postsSchema);
+const Post = mongoose.model('Posts', postsSchema);
+
+export default Post
